@@ -2,13 +2,12 @@
 Scrapyjs - Scrapy+Javascript integration
 ========================================
 
-This library provides Scrapy-Javascript integration through two different
-mechanisms:
+这个库以两种不同机制提供Scrapy-Javascript集成：
 
 - a Scrapy download handler 
 - a Scrapy downloader middlware
 
-You only need to use ONE of them, not both.
+你只需要使用其中的一种，而不是两种同时使用。
 
 Requirements
 ============
@@ -17,15 +16,14 @@ Requirements
 - python-webkit
 - python-jswebkit
 
-Usage
+使用
 =====
 
-Regardless of whether you are using the download handler or the downloader
-middleware variant, the usage is the same: those requests containing a
-"renderjs" key in request.meta will get download (and javascript rendered)
-through webkit instead of the Scrapy downloader.
+不管你是使用download handler还是downloader middleware，使用方法都是相同的：
+那些在request.meta中含有"renderjs" key的requests会通过webkit下载（javascript 渲染），
+而不再通过Scrapy的downloader下载。
 
-Download handler setup
+Download handler 设置
 ======================
 
 To enable the download handler add the following to your settings::
@@ -54,7 +52,7 @@ making Scrapy reactor type configurable.
 Downloader middlware setup
 ==========================
 
-To enable the downloader middleware add the following to your settings.py::
+在settings.py中添加下面的内容使能downloader middleware ::
 
     DOWNLOADER_MIDDLEWARES = {
         'scrapyjs.middleware.WebkitDownloader': 1,

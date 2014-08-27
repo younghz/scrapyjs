@@ -49,7 +49,7 @@ Handler cons:
 making Scrapy reactor type configurable.
 
 
-Downloader middlware setup
+Downloader middlware 设置
 ==========================
 
 在settings.py中添加下面的内容使能downloader middleware ::
